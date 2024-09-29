@@ -96,7 +96,7 @@
      */
     clc.LinksHandler.prototype.injectExpressionLinkButton = function (element)
     {
-        element.append(this._expressionLinkButtonHtml);
+        // element.append(this._expressionLinkButtonHtml);
     };
 
     /**

@@ -32,22 +32,15 @@ $(document).ready(function()
 
     var clcalc, settingsHandler;
 
-    function setColorTheme(theme)
-    {
-        $('body').toggleClass('dark', theme === 'dark');
-    }
-
     // Create settings handler so it can load settings before Calculator is initialized
     function onSettingsChanged()
     {
         clcalc.setSettings(settingsHandler.getSettings());
-        setColorTheme(settingsHandler.getSettings().colorTheme);
     }
 
     settingsHandler = new clc.SettingsHandler(onSettingsChanged);
 
-    // Set color theme on loading
-    setColorTheme(settingsHandler.getSettings().colorTheme);
+    $('body').toggleClass('dark', true);
 
     // Create Calculator instance and register all extensions
     clcalc = new clc.Calculator(math, settingsHandler.getSettings(), helpMessage);
@@ -228,10 +221,7 @@ $(document).ready(function()
         'exit':          false,
         'memory':        true,
         'enabled':       true,
-        'greetings':     function ()
-        {
-            this.echo(welcomeMessage, { 'raw': true });
-        },
+        'greetings':     function (){},
         'onClear':       function ()
         {
             linksHandler.setLogLinkButtonEnabled(false);

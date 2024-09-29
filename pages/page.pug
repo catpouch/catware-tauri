@@ -29,22 +29,18 @@ html(lang = 'en')
         link(href = 'main.css', rel = 'stylesheet', type = 'text/css')
 
     body
-        script.
-            if (typeof window.localStorage !== 'undefined') {
-                $('body').toggleClass('dark', localStorage.getItem('colorTheme') === 'dark');
-            }
 
-        nav.navbar.navbar-default.navbar-fixed-top
-            div.container-fluid
-                div.navbar-header
-                    a.navbar-brand(href = '/')
-                        img(alt = 'Cl Calc', src = './clcalc-32.png', width = 20, height = 20)
-                        | Cl Calc
-                div
-                    ul.nav.navbar-nav.navbar-right
-                        li(class = (page === 'help') ? 'active' : '')
-                            a(href = 'https://github.com/ovk/clcalc')
-                                img(alt = 'GitHub Page', src = './github.png', width = 20, height = 20)
-                                | GitHub
+        //- nav.navbar.navbar-default.navbar-fixed-top
+        //-     div.container-fluid
+        //-         div.navbar-header
+        //-             a.navbar-brand(href = '/')
+        //-                 img(alt = 'Cl Calc', src = './clcalc-32.png', width = 20, height = 20)
+        //-                 | Cl Calc
+        //-         div
+        //-             ul.nav.navbar-nav.navbar-right
+        //-                 li(class = (page === 'help') ? 'active' : '')
+        //-                     a(href = 'https://github.com/ovk/clcalc')
+        //-                         img(alt = 'GitHub Page', src = './github.png', width = 20, height = 20)
+        //-                         | GitHub
         block content
         block scripts

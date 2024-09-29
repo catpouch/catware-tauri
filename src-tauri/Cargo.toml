@@ -1,11 +1,11 @@
 [package]
-name = "app"
+name = "catware"
 version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
+description = "Software for the POUCH-99 calculator."
+authors = ["cat pouch"]
 license = ""
 repository = ""
-default-run = "app"
+default-run = "catware"
 edition = "2021"
 rust-version = "1.60"
 
