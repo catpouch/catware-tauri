@@ -1,6 +1,6 @@
 [package]
 name = "catware"
-version = "0.1.0"
+version = "0.2.0"
 description = "Software for the POUCH-99 calculator."
 authors = ["cat pouch"]
 license = ""

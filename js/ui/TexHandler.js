@@ -70,9 +70,9 @@
     {
         var self = this;
 
-        this._elements.togglePanelButton.click(function ()
+        $(document).keydown(function (e)
         {
-            if (!self._isPanelVisible())
+            if (!self._isPanelVisible() && e.key == "F2")
                 self._showPanel();
             else
                 self._hidePanel();
